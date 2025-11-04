@@ -22,77 +22,77 @@ function App() {
 
   return (
     <div className="w-full">
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-it-dark/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Shield className={`w-8 h-8 transition-colors ${isScrolled ? 'text-blue-400' : 'text-white'}`} />
-            <span className={`font-bold text-lg transition-colors ${isScrolled ? 'text-white' : 'text-white'}`}>IT Legends</span>
+            <Shield className={`w-8 h-8 transition-colors ${isScrolled ? 'text-it-blue' : 'text-white'}`} />
+            <span className={`font-orbitron font-bold text-lg tracking-wider transition-colors ${isScrolled ? 'text-white' : 'text-white'}`}>IT LEGENDS</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollToSection('home')} className={`font-medium transition-colors hover:text-red-500 ${isScrolled ? 'text-gray-300' : 'text-white/90'}`}>Home</button>
-            <button onClick={() => scrollToSection('about')} className={`font-medium transition-colors hover:text-red-500 ${isScrolled ? 'text-gray-300' : 'text-white/90'}`}>About</button>
-            <button onClick={() => scrollToSection('services')} className={`font-medium transition-colors hover:text-red-500 ${isScrolled ? 'text-gray-300' : 'text-white/90'}`}>Services</button>
-            <button onClick={() => scrollToSection('why-us')} className={`font-medium transition-colors hover:text-red-500 ${isScrolled ? 'text-gray-300' : 'text-white/90'}`}>Why Us</button>
-            <button onClick={() => scrollToSection('contact')} className={`font-medium transition-colors hover:text-red-500 ${isScrolled ? 'text-gray-300' : 'text-white/90'}`}>Contact</button>
+            <button onClick={() => scrollToSection('home')} className={`font-poppins font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>Home</button>
+            <button onClick={() => scrollToSection('about')} className={`font-poppins font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>About</button>
+            <button onClick={() => scrollToSection('services')} className={`font-poppins font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>Services</button>
+            <button onClick={() => scrollToSection('why-us')} className={`font-poppins font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>Why Us</button>
+            <button onClick={() => scrollToSection('contact')} className={`font-poppins font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>Contact</button>
           </div>
         </div>
       </nav>
 
-      <div id="home" className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
+      <div id="home" className="min-h-screen bg-gradient-to-br from-it-dark via-gray-900 to-it-dark flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
-          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
-          <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
-          <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-it-blue/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-it-red/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-it-blue/50 to-transparent"></div>
+          <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-it-red/30 to-transparent"></div>
+          <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-it-blue/30 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
           <div className="mb-8 inline-flex items-center justify-center">
-            <Shield className="w-16 h-16 text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
+            <Shield className="w-16 h-16 text-it-blue drop-shadow-[0_0_25px_rgba(0,123,255,0.6)]" />
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+          <h1 className="font-orbitron text-5xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-wider">
             Providing You with{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-red-500 drop-shadow-[0_0_30px_rgba(59,130,246,0.5)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-it-blue via-it-red to-it-blue drop-shadow-[0_0_40px_rgba(199,0,57,0.6)]">
               LEGENDARY
             </span>{' '}
             I.T. Services
           </h1>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-semibold rounded-lg shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+            <button className="group px-8 py-4 bg-it-blue hover:bg-it-blue/80 text-white font-poppins font-semibold rounded-xl shadow-[0_0_20px_rgba(0,123,255,0.4)] hover:shadow-[0_0_30px_rgba(0,123,255,0.7)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
               Get Support
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="group px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold rounded-lg shadow-lg shadow-red-500/50 hover:shadow-red-500/70 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+            <button className="group px-8 py-4 bg-it-red hover:bg-it-red/80 text-white font-poppins font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
               Our Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 
-          <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="font-poppins text-it-silver text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Empowering South African businesses with reliable IT solutions
           </p>
         </div>
       </div>
 
-      <div className="w-full bg-gradient-to-b from-gray-900 to-gray-100 py-20">
-        <div className="h-px bg-gradient-to-r from-red-500 via-blue-500 to-red-500"></div>
+      <div className="w-full bg-gradient-to-b from-it-dark to-it-silver/20 py-20">
+        <div className="h-px bg-gradient-to-r from-it-red via-it-blue to-it-red shadow-[0_0_10px_rgba(199,0,57,0.5)]"></div>
       </div>
 
-      <div id="about" className="w-full bg-gradient-to-b from-gray-100 to-white py-20 px-6">
+      <div id="about" className="w-full bg-gradient-to-b from-it-silver/20 to-white py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
-            Who We Are
+          <h2 className="font-orbitron text-4xl md:text-5xl font-bold text-it-dark mb-12 tracking-wider">
+            WHO WE ARE
           </h2>
 
-          <p className="text-gray-800 text-lg md:text-xl leading-relaxed mb-6 max-w-3xl mx-auto">
+          <p className="font-poppins text-gray-800 text-lg md:text-xl leading-relaxed mb-6 max-w-3xl mx-auto">
             Our mission is to protect, maintain, and enhance your technology infrastructure so you can focus on what truly matters — your business growth.
           </p>
 
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+          <p className="font-poppins text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
             We deliver innovative, reliable, and efficient IT support for businesses of all sizes.
           </p>
         </div>
@@ -100,8 +100,8 @@ function App() {
 
       <div id="services" className="w-full bg-white py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
-            Our Services
+          <h2 className="font-orbitron text-4xl md:text-5xl font-bold text-it-dark text-center mb-16 tracking-wider">
+            OUR SERVICES
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -139,10 +139,10 @@ function App() {
         </div>
       </div>
 
-      <div id="why-us" className="w-full bg-gradient-to-b from-gray-900 to-gray-800 py-20 px-6">
+      <div id="why-us" className="w-full bg-gradient-to-b from-it-dark to-gray-900 py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
-            Why Partner With Us
+          <h2 className="font-orbitron text-4xl md:text-5xl font-bold text-white text-center mb-16 tracking-wider">
+            WHY PARTNER WITH US
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -168,23 +168,23 @@ function App() {
         </div>
       </div>
 
-      <div id="contact" className="w-full bg-gradient-to-b from-white to-gray-50 py-20 px-6">
+      <div id="contact" className="w-full bg-gradient-to-b from-white to-it-silver/30 py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-4">
-            Let's Build Something Legendary
+          <h2 className="font-orbitron text-4xl md:text-5xl font-bold text-it-dark text-center mb-4 tracking-wider">
+            LET'S BUILD SOMETHING LEGENDARY
           </h2>
 
           <div className="flex flex-col items-center gap-6 mb-12">
             <div className="flex flex-wrap justify-center gap-6 text-gray-700">
-              <a href="tel:+27846348144" className="flex items-center gap-2 hover:text-red-600 transition-colors">
+              <a href="tel:+27846348144" className="font-poppins flex items-center gap-2 hover:text-it-red transition-colors">
                 <Phone className="w-5 h-5" />
                 <span>(+27) 84 634 8144</span>
               </a>
-              <a href="mailto:info@itlegends.co.za" className="flex items-center gap-2 hover:text-red-600 transition-colors">
+              <a href="mailto:info@itlegends.co.za" className="font-poppins flex items-center gap-2 hover:text-it-red transition-colors">
                 <Mail className="w-5 h-5" />
                 <span>info@itlegends.co.za</span>
               </a>
-              <a href="https://www.itlegends.co.za" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-red-600 transition-colors">
+              <a href="https://www.itlegends.co.za" target="_blank" rel="noopener noreferrer" className="font-poppins flex items-center gap-2 hover:text-it-red transition-colors">
                 <Globe className="w-5 h-5" />
                 <span>www.itlegends.co.za</span>
               </a>
@@ -195,7 +195,7 @@ function App() {
                 href="https://wa.me/27846348144"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold rounded-lg shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                className="px-6 py-3 bg-it-red hover:bg-it-red/80 text-white font-poppins font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 <MessageSquare className="w-5 h-5" />
                 WhatsApp
@@ -204,7 +204,7 @@ function App() {
                 href="https://facebook.com/itlegends"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold rounded-lg shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105"
+                className="px-6 py-3 bg-it-red hover:bg-it-red/80 text-white font-poppins font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105"
               >
                 Facebook
               </a>
@@ -212,7 +212,7 @@ function App() {
                 href="https://instagram.com/itlegends"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold rounded-lg shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105"
+                className="px-6 py-3 bg-it-red hover:bg-it-red/80 text-white font-poppins font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105"
               >
                 Instagram
               </a>
@@ -223,9 +223,9 @@ function App() {
         </div>
       </div>
 
-      <footer className="w-full bg-gray-900 py-8 px-6">
+      <footer className="w-full bg-it-dark py-8 px-6 border-t border-it-blue/30">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-gray-400 text-sm md:text-base">
+          <p className="font-poppins text-it-silver text-sm md:text-base">
             © 2025 IT Legends — Providing You with LEGENDARY Services.
           </p>
         </div>
@@ -236,24 +236,24 @@ function App() {
 
 function ServiceCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="group relative bg-white border border-gray-200 rounded-xl p-8 transition-all duration-300 hover:shadow-2xl hover:border-transparent overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-transparent to-red-500/0 group-hover:from-blue-500/10 group-hover:to-red-500/10 transition-all duration-300"></div>
+    <div className="group relative bg-white border border-gray-200 rounded-xl p-8 transition-all duration-300 hover:shadow-[0_0_30px_rgba(199,0,57,0.3)] hover:border-it-red/50 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-it-blue/0 via-transparent to-it-red/0 group-hover:from-it-blue/10 group-hover:to-it-red/10 transition-all duration-300"></div>
 
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-blue-500 to-red-500"></div>
-        <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-red-500 to-blue-500"></div>
+        <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-it-blue to-it-red"></div>
+        <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-it-red to-it-blue"></div>
       </div>
 
       <div className="relative z-10">
-        <div className="mb-6 inline-flex items-center justify-center p-3 bg-gradient-to-br from-blue-50 to-red-50 rounded-lg group-hover:shadow-lg group-hover:shadow-blue-500/30 transition-all duration-300 text-blue-600 group-hover:text-red-600">
+        <div className="mb-6 inline-flex items-center justify-center p-3 bg-gradient-to-br from-it-blue/10 to-it-red/10 rounded-lg group-hover:shadow-[0_0_20px_rgba(199,0,57,0.4)] transition-all duration-300 text-it-blue group-hover:text-it-red">
           {icon}
         </div>
 
-        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-red-600 transition-all duration-300">
+        <h3 className="font-orbitron text-xl font-bold text-it-dark mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-it-blue group-hover:to-it-red transition-all duration-300 tracking-wide">
           {title}
         </h3>
 
-        <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+        <p className="font-poppins text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed">
           {description}
         </p>
       </div>
@@ -271,15 +271,15 @@ function FeatureCard({ icon, title, description, delay }: { icon: React.ReactNod
       }}
     >
       <div className="flex flex-col items-center h-full">
-        <div className="mb-6 inline-flex items-center justify-center p-4 bg-gradient-to-br from-blue-500/20 to-red-500/20 rounded-full text-blue-400 drop-shadow-[0_0_25px_rgba(59,130,246,0.4)] hover:drop-shadow-[0_0_35px_rgba(59,130,246,0.6)] transition-all duration-300">
+        <div className="mb-6 inline-flex items-center justify-center p-4 bg-gradient-to-br from-it-blue/20 to-it-red/20 rounded-full text-it-blue drop-shadow-[0_0_25px_rgba(0,123,255,0.5)] hover:drop-shadow-[0_0_40px_rgba(199,0,57,0.7)] transition-all duration-300">
           {icon}
         </div>
 
-        <h3 className="text-2xl font-bold text-white mb-4">
+        <h3 className="font-orbitron text-2xl font-bold text-white mb-4 tracking-wide">
           {title}
         </h3>
 
-        <p className="text-gray-300 leading-relaxed text-base">
+        <p className="font-poppins text-it-silver leading-relaxed text-base">
           {description}
         </p>
       </div>
@@ -318,10 +318,10 @@ function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8 border border-it-blue/20">
       <div className="space-y-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+          <label htmlFor="name" className="block text-sm font-poppins font-semibold text-it-dark mb-2">
             Name
           </label>
           <input
@@ -331,13 +331,13 @@ function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-it-red focus:border-transparent transition-all duration-200 font-poppins"
             placeholder="Your name"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+          <label htmlFor="email" className="block text-sm font-poppins font-semibold text-it-dark mb-2">
             Email
           </label>
           <input
@@ -347,13 +347,13 @@ function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-it-red focus:border-transparent transition-all duration-200 font-poppins"
             placeholder="your.email@example.com"
           />
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+          <label htmlFor="message" className="block text-sm font-poppins font-semibold text-it-dark mb-2">
             Message
           </label>
           <textarea
@@ -363,7 +363,7 @@ function ContactForm() {
             onChange={handleChange}
             required
             rows={5}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200 resize-none"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-it-red focus:border-transparent transition-all duration-200 resize-none font-poppins"
             placeholder="Tell us about your IT needs..."
           />
         </div>
@@ -371,19 +371,19 @@ function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold rounded-lg shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+          className="w-full px-8 py-4 bg-it-red hover:bg-it-red/80 text-white font-poppins font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
 
         {submitStatus === 'success' && (
-          <div className="text-center text-green-600 font-semibold animate-fade-in">
+          <div className="text-center text-green-600 font-poppins font-semibold animate-fade-in">
             Message sent successfully! We'll get back to you soon.
           </div>
         )}
 
         {submitStatus === 'error' && (
-          <div className="text-center text-red-600 font-semibold animate-fade-in">
+          <div className="text-center text-it-red font-poppins font-semibold animate-fade-in">
             Something went wrong. Please try again.
           </div>
         )}
