@@ -1,4 +1,5 @@
-import { ArrowRight, Shield, Headphones, Cpu, Lock, Cloud, Server, Users, Zap, Award, Expand } from 'lucide-react';
+import { ArrowRight, Shield, Headphones, Cpu, Lock, Cloud, Server, Users, Zap, Award, Expand, Phone, Mail, Globe, MessageSquare } from 'lucide-react';
+import { useState } from 'react';
 
 function App() {
   return (
@@ -131,6 +132,61 @@ function App() {
           </div>
         </div>
       </div>
+
+      <div className="w-full bg-gradient-to-b from-white to-gray-50 py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-4">
+            Let's Build Something Legendary
+          </h2>
+
+          <div className="flex flex-col items-center gap-6 mb-12">
+            <div className="flex flex-wrap justify-center gap-6 text-gray-700">
+              <a href="tel:+27846348144" className="flex items-center gap-2 hover:text-red-600 transition-colors">
+                <Phone className="w-5 h-5" />
+                <span>(+27) 84 634 8144</span>
+              </a>
+              <a href="mailto:info@itlegends.co.za" className="flex items-center gap-2 hover:text-red-600 transition-colors">
+                <Mail className="w-5 h-5" />
+                <span>info@itlegends.co.za</span>
+              </a>
+              <a href="https://www.itlegends.co.za" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-red-600 transition-colors">
+                <Globe className="w-5 h-5" />
+                <span>www.itlegends.co.za</span>
+              </a>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://wa.me/27846348144"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold rounded-lg shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+              >
+                <MessageSquare className="w-5 h-5" />
+                WhatsApp
+              </a>
+              <a
+                href="https://facebook.com/itlegends"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold rounded-lg shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105"
+              >
+                Facebook
+              </a>
+              <a
+                href="https://instagram.com/itlegends"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold rounded-lg shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105"
+              >
+                Instagram
+              </a>
+            </div>
+          </div>
+
+          <ContactForm />
+        </div>
+      </div>
     </div>
   );
 }
@@ -185,6 +241,111 @@ function FeatureCard({ icon, title, description, delay }: { icon: React.ReactNod
         </p>
       </div>
     </div>
+  );
+}
+
+function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    setSubmitStatus('success');
+    setIsSubmitting(false);
+    setFormData({ name: '', email: '', message: '' });
+
+    setTimeout(() => setSubmitStatus('idle'), 3000);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+      <div className="space-y-6">
+        <div>
+          <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200"
+            placeholder="Your name"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200"
+            placeholder="your.email@example.com"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            rows={5}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200 resize-none"
+            placeholder="Tell us about your IT needs..."
+          />
+        </div>
+
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold rounded-lg shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+        >
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </button>
+
+        {submitStatus === 'success' && (
+          <div className="text-center text-green-600 font-semibold animate-fade-in">
+            Message sent successfully! We'll get back to you soon.
+          </div>
+        )}
+
+        {submitStatus === 'error' && (
+          <div className="text-center text-red-600 font-semibold animate-fade-in">
+            Something went wrong. Please try again.
+          </div>
+        )}
+      </div>
+    </form>
   );
 }
 
