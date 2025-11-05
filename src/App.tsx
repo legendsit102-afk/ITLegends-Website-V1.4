@@ -39,7 +39,8 @@ function App() {
         </div>
       </nav>
 
-      <div id="home" className="min-h-screen bg-gradient-to-br from-it-dark via-gray-900 to-it-dark flex items-center justify-center relative overflow-hidden">
+      <div id="home" className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center relative overflow-hidden" style={{backgroundImage: 'url(/src/img/hero-bg.jpg)'}}>
+        <div className="absolute inset-0 bg-[#0A0A0A]/60"></div>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-it-blue/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-it-red/10 rounded-full blur-3xl animate-pulse delay-700"></div>
