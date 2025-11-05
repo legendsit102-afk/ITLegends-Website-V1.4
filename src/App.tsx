@@ -39,8 +39,8 @@ function App() {
         </div>
       </nav>
 
-      <div id="home" className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center relative overflow-hidden" style={{backgroundImage: 'url(/src/img/hero-bg.jpg)'}}>
-        <div className="absolute inset-0 bg-[#0A0A0A]/60"></div>
+      <div id="home" className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center relative overflow-hidden animate-section-fade" style={{backgroundImage: 'url(/src/img/hero-bg.jpg)'}}>
+        <div className="absolute inset-0 bg-[#0A0A0A]/65"></div>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-it-blue/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-it-red/10 rounded-full blur-3xl animate-pulse delay-700"></div>
@@ -79,12 +79,12 @@ function App() {
         </div>
       </div>
 
-      <div className="w-full bg-gradient-to-b from-it-dark to-it-silver/20 py-20">
+      <div className="w-full bg-gradient-to-b from-it-dark to-it-silver/20 py-20 animate-section-fade">
         <div className="h-px bg-gradient-to-r from-it-red via-it-blue to-it-red shadow-[0_0_10px_rgba(199,0,57,0.5)]"></div>
       </div>
 
-      <div id="about" className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative" style={{backgroundImage: 'url(/src/img/about-bg.jpg)'}}>
-        <div className="absolute inset-0 bg-[#E0E0E0]/30"></div>
+      <div id="about" className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative animate-section-fade" style={{backgroundImage: 'url(/src/img/about-bg.jpg)'}}>
+        <div className="absolute inset-0 bg-[#E0E0E0]/35"></div>
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-12 tracking-tight uppercase">
             WHO WE ARE
@@ -100,8 +100,8 @@ function App() {
         </div>
       </div>
 
-      <div id="services" className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative" style={{backgroundImage: 'url(/src/img/services-bg.jpg)'}}>
-        <div className="absolute inset-0 bg-[#0033AA]/40"></div>
+      <div id="services" className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative animate-section-fade" style={{backgroundImage: 'url(/src/img/services-bg.jpg)'}}>
+        <div className="absolute inset-0 bg-[#0033AA]/45"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-white text-center mb-16 tracking-tight uppercase">
             OUR SERVICES
@@ -142,8 +142,8 @@ function App() {
         </div>
       </div>
 
-      <div id="why-us" className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative" style={{backgroundImage: 'url(/src/img/whyus-bg.jpg)'}}>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#111111] to-[#000000] opacity-65"></div>
+      <div id="why-us" className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative animate-section-fade" style={{backgroundImage: 'url(/src/img/whyus-bg.jpg)'}}>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#111111] to-[#000000] opacity-70"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-white text-center mb-16 tracking-tight uppercase">
             WHY PARTNER WITH US
@@ -172,8 +172,8 @@ function App() {
         </div>
       </div>
 
-      <div id="contact" className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative" style={{backgroundImage: 'url(/src/img/contact-bg.jpg)'}}>
-        <div className="absolute inset-0 bg-[#0B0B22]/70"></div>
+      <div id="contact" className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative animate-section-fade" style={{backgroundImage: 'url(/src/img/contact-bg.jpg)'}}>
+        <div className="absolute inset-0 bg-[#0B0B22]/75"></div>
         <div className="max-w-4xl mx-auto relative z-10">
           <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-white text-center mb-4 tracking-tight uppercase">
             LET'S BUILD SOMETHING LEGENDARY
@@ -228,7 +228,7 @@ function App() {
         </div>
       </div>
 
-      <footer className="w-full bg-it-dark py-8 px-6 border-t border-it-blue/30">
+      <footer className="w-full bg-it-dark py-8 px-6 border-t border-it-blue/30 animate-section-fade">
         <div className="max-w-7xl mx-auto text-center">
           <p className="font-montserrat text-it-silver text-sm md:text-base font-medium">
             © 2025 IT Legends — Providing You with LEGENDARY Services.
@@ -241,8 +241,8 @@ function App() {
 
 function ServiceCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="group relative bg-white/95 backdrop-blur border border-white/50 rounded-xl p-8 transition-all duration-300 shadow-lg hover:shadow-[0_20px_40px_rgba(199,0,57,0.4)] hover:border-it-red/80 overflow-hidden transform hover:-translate-y-1">
-      <div className="absolute inset-0 bg-gradient-to-br from-it-blue/0 via-transparent to-it-red/0 group-hover:from-it-blue/10 group-hover:to-it-red/10 transition-all duration-300"></div>
+    <div className="group relative bg-white/96 backdrop-blur-sm border border-white/60 rounded-xl p-8 transition-all duration-300 shadow-lg hover:shadow-[0_20px_45px_rgba(199,0,57,0.5)] hover:border-it-red/90 overflow-hidden transform hover:-translate-y-1">
+      <div className="absolute inset-0 bg-gradient-to-br from-it-blue/0 via-transparent to-it-red/0 group-hover:from-it-blue/15 group-hover:to-it-red/15 transition-all duration-300"></div>
 
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-it-blue to-it-red"></div>
@@ -250,7 +250,7 @@ function ServiceCard({ icon, title, description }: { icon: React.ReactNode; titl
       </div>
 
       <div className="relative z-10">
-        <div className="mb-6 inline-flex items-center justify-center p-3 bg-gradient-to-br from-it-blue/10 to-it-red/10 rounded-lg group-hover:shadow-[0_0_20px_rgba(199,0,57,0.4)] transition-all duration-300 text-it-blue group-hover:text-it-red">
+        <div className="mb-6 inline-flex items-center justify-center p-3 bg-gradient-to-br from-it-blue/15 to-it-red/15 rounded-lg group-hover:shadow-[0_0_25px_rgba(199,0,57,0.5),0_0_15px_rgba(0,123,255,0.3)] transition-all duration-300 text-it-blue group-hover:text-it-red">
           {icon}
         </div>
 
@@ -276,15 +276,15 @@ function FeatureCard({ icon, title, description, delay }: { icon: React.ReactNod
       }}
     >
       <div className="flex flex-col items-center h-full">
-        <div className="mb-6 inline-flex items-center justify-center p-4 bg-gradient-to-br from-it-blue/20 to-it-red/20 rounded-full text-it-blue drop-shadow-[0_0_25px_rgba(0,123,255,0.5)] hover:drop-shadow-[0_0_40px_rgba(199,0,57,0.7)] transition-all duration-300">
+        <div className="mb-6 inline-flex items-center justify-center p-4 bg-gradient-to-br from-it-blue/25 to-it-red/25 rounded-full text-it-blue drop-shadow-[0_0_30px_rgba(0,123,255,0.6)] hover:drop-shadow-[0_0_45px_rgba(199,0,57,0.8)] transition-all duration-300">
           {icon}
         </div>
 
-        <h3 className="font-montserrat text-2xl font-bold text-white mb-4 tracking-tight uppercase">
+        <h3 className="font-montserrat text-2xl font-bold text-white mb-4 tracking-tight uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
           {title}
         </h3>
 
-        <p className="font-montserrat text-it-silver leading-relaxed text-base font-medium">
+        <p className="font-montserrat text-it-silver leading-relaxed text-base font-medium drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
           {description}
         </p>
       </div>
