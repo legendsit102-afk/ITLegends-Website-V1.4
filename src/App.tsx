@@ -139,7 +139,7 @@ function App() {
         </div>
       </div>
 
-      <MicroDivider fromColor="rgba(10, 10, 10, 0.6)" toColor="rgba(10, 10, 10, 0.7)" />
+      <MicroDivider fromColor="rgba(10, 10, 10, 0.9)" toColor="rgba(0, 51, 170, 0.4)" blurEdges />
 
       <div id="services" className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative section-fade" style={{backgroundImage: 'url(/src/img/services-bg.jpg)'}}>
         <div className="absolute inset-0 bg-[#0A0A0A]/70"></div>
