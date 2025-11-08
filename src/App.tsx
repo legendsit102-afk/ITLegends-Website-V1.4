@@ -67,6 +67,7 @@ function App() {
               src={logoNavbar}
               alt="IT Legends Logo"
               className="h-[36px] md:h-[48px] w-auto object-contain transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(0,123,255,0.25)]"
+              style={{ filter: 'none', opacity: 1, mixBlendMode: 'normal' }}
             />
             <span className={`font-montserrat font-bold text-lg tracking-widest uppercase transition-colors ${isScrolled ? 'text-white' : 'text-white'}`}>IT LEGENDS</span>
           </a>
